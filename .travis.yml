@@ -1,0 +1,16 @@
+language: bash
+
+services:
+  - docker
+
+install: skip
+
+script:
+  - bash deploy.sh sartography/covid-sftp
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+    recipients:
+      - dan@sartography.com
